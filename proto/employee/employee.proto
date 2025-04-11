@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package employee;
+
+option go_package = "github.com/huynhthanhthao/hrm/proto/employee";
+
+service EmployeeService {
+  rpc CreateEmployee (CreateEmployeeRequest) returns (CreateEmployeeResponse);
+  rpc GetEmployee (GetEmployeeRequest) returns (GetEmployeeResponse);
+}
+
+message CreateEmployeeRequest {
+  string name = 1;
+  string department = 2;
+}
+
+message CreateEmployeeResponse {
+  string id = 1;
+  string name = 2;
+  string department = 3;
+}
+
+message GetEmployeeRequest {
+  string id = 1;
+}
+
+message GetEmployeeResponse {
+  string id = 1;
+  string name = 2;
+  string department = 3;
+}
