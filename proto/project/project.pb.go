@@ -258,7 +258,7 @@ const file_proto_project_project_proto_rawDesc = "" +
 	"\x0eProjectService\x12N\n" +
 	"\rCreateProject\x12\x1d.project.CreateProjectRequest\x1a\x1e.project.CreateProjectResponse\x12E\n" +
 	"\n" +
-	"GetProject\x12\x1a.project.GetProjectRequest\x1a\x1b.project.GetProjectResponseB5Z3github.com/huynhthanhthao/hrm/proto/project;projectb\x06proto3"
+	"GetProject\x12\x1a.project.GetProjectRequest\x1a\x1b.project.GetProjectResponseB\x0fZ\rproto/projectb\x06proto3"
 
 var (
 	file_proto_project_project_proto_rawDescOnce sync.Once

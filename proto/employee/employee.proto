@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package employee;
 
-option go_package = "github.com/huynhthanhthao/hrm/proto/employee;employee";
+option go_package = "proto/employee";
 
 service EmployeeService {
   rpc CreateEmployee (CreateEmployeeRequest) returns (CreateEmployeeResponse);

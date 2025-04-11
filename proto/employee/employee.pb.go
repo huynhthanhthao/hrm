@@ -263,7 +263,7 @@ const file_proto_employee_employee_proto_rawDesc = "" +
 	"department2\xb2\x01\n" +
 	"\x0fEmployeeService\x12S\n" +
 	"\x0eCreateEmployee\x12\x1f.employee.CreateEmployeeRequest\x1a .employee.CreateEmployeeResponse\x12J\n" +
-	"\vGetEmployee\x12\x1c.employee.GetEmployeeRequest\x1a\x1d.employee.GetEmployeeResponseB7Z5github.com/huynhthanhthao/hrm/proto/employee;employeeb\x06proto3"
+	"\vGetEmployee\x12\x1c.employee.GetEmployeeRequest\x1a\x1d.employee.GetEmployeeResponseB\x10Z\x0eproto/employeeb\x06proto3"
 
 var (
 	file_proto_employee_employee_proto_rawDescOnce sync.Once
