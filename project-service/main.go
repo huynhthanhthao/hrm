@@ -27,14 +27,14 @@ func (s *projectServer) CreateProject(ctx context.Context, req *project.CreatePr
 }
 
 func (s *projectServer) GetProject(ctx context.Context, req *project.GetProjectRequest) (*project.GetProjectResponse, error) {
-	project, exists := s.projects[req.Id]
+	projectFound, exists := s.projects[req.Id]
 	if !exists {
 		return nil, fmt.Errorf("project not found")
 	}
 	return &project.GetProjectResponse{
-		Id:          project.Id,
-		Name:        project.Name,
-		Description: project.Description,
+		Id:          projectFound.Id,
+		Name:        projectFound.Name,
+		Description: projectFound.Description,
 	}, nil
 }
 

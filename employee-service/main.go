@@ -27,14 +27,14 @@ func (s *employeeServer) CreateEmployee(ctx context.Context, req *employee.Creat
 }
 
 func (s *employeeServer) GetEmployee(ctx context.Context, req *employee.GetEmployeeRequest) (*employee.GetEmployeeResponse, error) {
-	employee, exists := s.employees[req.Id]
+	employeeFound, exists := s.employees[req.Id]
 	if !exists {
 		return nil, fmt.Errorf("employee not found")
 	}
 	return &employee.GetEmployeeResponse{
-		Id:         employee.Id,
-		Name:       employee.Name,
-		Department: employee.Department,
+		Id:         employeeFound.Id,
+		Name:       employeeFound.Name,
+		Department: employeeFound.Department,
 	}, nil
 }
 

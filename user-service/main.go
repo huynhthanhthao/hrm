@@ -17,24 +17,25 @@ type userServer struct {
 
 func (s *userServer) CreateUser(ctx context.Context, req *user.CreateUserRequest) (*user.CreateUserResponse, error) {
 	id := fmt.Sprintf("user-%d", len(s.users)+1)
-	user := &user.CreateUserResponse{
+	newUser := &user.CreateUserResponse{
 		Id:    id,
 		Name:  req.Name,
 		Email: req.Email,
 	}
-	s.users[id] = user
-	return user, nil
+	s.users[id] = newUser
+	return newUser, nil
 }
 
+
 func (s *userServer) GetUser(ctx context.Context, req *user.GetUserRequest) (*user.GetUserResponse, error) {
-	user, exists := s.users[req.Id]
+	foundUser, exists := s.users[req.Id]
 	if !exists {
 		return nil, fmt.Errorf("user not found")
 	}
 	return &user.GetUserResponse{
-		Id:    user.Id,
-		Name:  user.Name,
-		Email: user.Email,
+		Id:    foundUser.Id,
+		Name:  foundUser.Name,
+		Email: foundUser.Email,
 	}, nil
 }
 
